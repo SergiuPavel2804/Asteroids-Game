@@ -1,0 +1,83 @@
+
+body{
+  background: #000;
+  background-image: url("media/starsBackground.png");
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.gameHeader{
+  font-size: 50px;
+  color: #fff;
+  text-shadow: -8px 5px 5px #660066;
+}
+
+#container {
+  max-width: 1300px;
+  margin: auto;
+}
+
+#game_canvas {
+  background: rgb(40, 11, 52);
+  border: 1px solid #FFF;
+  width: 80%;
+}
+
+.btn {
+  --hue: 190;
+  position: relative;
+  padding: 1rem 3rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: hsl(var(--hue), 100%, 41%);
+  border: 1px solid hsl(var(--hue), 100%, 41%);
+  outline: transparent;
+  overflow: hidden;
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+  transition: 0.25s;
+  margin-top: 25px;
+}
+.btn:hover {
+  background: hsl(var(--hue), 100%, 31%);
+}
+.btn-primary {
+  --hue: 273;
+}
+.btn-ghost {
+  color: hsl(var(--hue), 100%, 41%);
+  background-color: transparent;
+  border-color: hsl(var(--hue), 100%, 41%);
+}
+.btn-ghost:hover {
+  color: white;
+}
+.btn-shine {
+  color: white;
+}
+.btn-shine::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, hsla(var(--hue), 100%, 41%, 0.5), transparent);
+  transform: translateX(-100%);
+  transition: 0.6s;
+}
+.btn-shine:hover {
+  background: transparent;
+  box-shadow: 0 0 20px 10px hsla(var(--hue), 100%, 41%, 0.5);
+}
+.btn-shine:hover::before {
+  transform: translateX(100%);
+}
+
+
+
+
